@@ -28,14 +28,12 @@ export default function About() {
         </CardHeader>
         <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
           
-             Hi! I'm Tristan Manacob, a second-year Bachelor of Science in Information Technology (BSIT) student with a passion for technology and web development.
+             Hi! I'm Joey G. Parado, a second-year Bachelor of Science in Information Technology (BSIT) student with a passion for technology and web development
                      <p>
            
-          </p> My goal is to become a skilled Full-Stack Developer who can build complete, innovative, and efficient web applications. I'm always eager to learn, explore new challenges, and grow as an IT professional
+          </p> My goal is to become a skilled Full-Stack Developer capable of building complete, innovative, and efficient software solutions. I'm always eager to learn, embrace new challenges, and grow as an IT professional.
           <p>
-            I'm currently learning both Frontend and Backend Development, exploring how to create responsive, user-friendly websites and functional web applications. I'm continuously improving my programming skills, learning new technologies, and gaining hands-on experience through personal projects and practice.
-
-My goal is to become a skilled Full-Stack Developer who can build complete, innovative, and efficient web applications. I'm always eager to learn, explore new challenges, and grow as an IT professional
+            I am currently learning both Frontend and Backend Development, exploring how to build responsive, user-friendly websites alongside functional, end-to-end web applications. Through continuous practice, exploring new technologies, and creating personal projects, I am actively honing my programming skills and gaining hands-on experience.
           </p>
         </CardContent>
       </Card>
