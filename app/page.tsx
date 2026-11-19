@@ -38,13 +38,15 @@ export default function Home() {
         </Badge>
  
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          Hi, I&apos;m Tristan Manacob.
+          Hi, I&apos;m Antonio Diaz.
         </h1>
  
         <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-          I&apos;m a second-year Information Technology student who enjoys
-          building websites and web applications. This portfolio shows what I
-          study, what I&apos;m learning, and what I do outside of class.
+          I build reliable APIs & scalable backend systems.
+
+Description: I'm a BS Information Technology student and Backend Developer
+ focused on server-side architecture, database design, and secure API development.
+ I enjoy turning complex logic into fast, dependable systems that power seamless web applications.
         </p>
  
         <div className="flex flex-wrap gap-3">

@@ -1,63 +1,100 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Camera, Gamepad2, Music, Dumbbell, Coffee, Trophy } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Camera, Gamepad2, Music, Coffee, Trophy, Sparkles } from "lucide-react";
 
 const hobbies = [
   {
+    title: "Football & Basketball",
+    icon: Trophy,
+    tag: "Active",
+    featured: true,
+    description:
+      "Staying competitive and active on the field and the court—building teamwork, endurance, and discipline outside of software development.",
+  },
+  {
     title: "Photography",
     icon: Camera,
-    description: "capturing the nature.",
+    tag: "Creative",
+    featured: false,
+    description:
+      "Capturing candid moments, outdoor scenery, and the beauty of nature through the lens.",
   },
   {
     title: "Gaming",
     icon: Gamepad2,
-    description: "all around that give me enjoy.",
+    tag: "Leisure",
+    featured: false,
+    description:
+      "Unwinding with competitive and story-driven games that challenge strategy and quick thinking.",
   },
   {
     title: "Music",
     icon: Music,
-    description: "listening music like guddhist, chocolate factory, and many more.",
+    tag: "Chill",
+    featured: false,
+    description:
+      "Listening to OPM reggae, hip-hop, and chill tracks from artists like Guddhist, Chocolate Factory, and more while coding.",
   },
-  
   {
     title: "Coffee",
     icon: Coffee,
-    description: "drinking cofee while relaxing outside.",
-  },
-  {
-    title: "Sports",
-    icon: Trophy,
-    description: "Playing Sepak Takraw and in 2023 I was played at National PRISAA in Zamboanga City.",
+    tag: "Daily Ritual",
+    featured: false,
+    description:
+      "Enjoying a fresh cup of coffee outdoors to recharge, clear my head, and brainstorm new backend ideas.",
   },
 ];
 
 export default function Hobbies() {
   return (
-    <div className="space-y-8 max-w-4xl mx-auto">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight">Hobbies & Interests</h1>
-        <p className="text-muted-foreground mt-1">What I enjoy doing outside of coding.</p>
+    <section className="max-w-4xl mx-auto py-12 px-4 sm:px-6 space-y-10">
+      {/* Header Section matching About, Education, and Contact */}
+      <div className="border-b pb-6">
+        <div className="flex items-center gap-2 text-primary font-medium text-sm mb-2">
+          <Sparkles className="h-4 w-4" />
+          <span>Beyond the Terminal</span>
+        </div>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          Hobbies & Interests
+        </h1>
+        <p className="text-muted-foreground mt-2 max-w-xl">
+          How I recharge, stay active, and find inspiration away from the keyboard.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Bento-Style Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {hobbies.map((hobby) => {
           const Icon = hobby.icon;
           return (
-            <Card key={hobby.title} className="hover:shadow-md transition-shadow">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-primary/10 rounded-lg text-primary">
-                    <Icon className="h-5 w-5" />
+            <Card
+              key={hobby.title}
+              className={`shadow-sm border-muted transition-all hover:border-primary/40 hover:shadow-md ${
+                hobby.featured ? "sm:col-span-2 lg:col-span-2 bg-primary/[0.02]" : ""
+              }`}
+            >
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 bg-primary/10 rounded-lg text-primary shrink-0">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <CardTitle className="text-lg">{hobby.title}</CardTitle>
                   </div>
-                  <CardTitle className="text-lg">{hobby.title}</CardTitle>
+                  <Badge variant="secondary" className="text-xs font-normal">
+                    {hobby.tag}
+                  </Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">{hobby.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {hobby.description}
+                </p>
               </CardContent>
             </Card>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
